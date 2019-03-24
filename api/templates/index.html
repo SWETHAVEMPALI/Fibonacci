@@ -1,0 +1,25 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <section class="api">
+        <div class="container">
+            <form action="" method="GET">
+                <input type="text" placeholder="Enter a number" name="input_number">
+                <button>Submit</button>
+            </form>
+            <div>
+                {% if nthNumber %}
+                    <p>Nth number in Fibonacci sequence : {{nthNumber}}</p>
+                    <br/>
+                    <p>Time Taken in seconds: {{time_taken}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>
